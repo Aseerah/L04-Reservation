@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/reservationTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingBottom="15dp"
+                android:text="@string/reservation"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/enter_your_name"
+                android:textColor="@color/black"
+                android:textSize="17dp" />
+
+            <EditText
+                android:id="@+id/nameLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:color="#00cc33"
+                android:hint="@string/name"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/enter_mobile_number"
+                android:textColor="@color/black"
+
+                android:textSize="17dp" />
+
+            <EditText
+                android:id="@+id/numberLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:color="#00cc33"
+                android:digits="+0123456789"
+                android:hint="@string/mobile_number"
+                android:inputType="phone" />
+
+            <TextView
+                android:id="@+id/groupSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/enter_number_of_people_include_yourself"
+                android:textColor="@color/black"
+                android:textSize="17dp" />
+
+            <EditText
+                android:id="@+id/groupSizeLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:color="#00cc33"
+                android:ems="10"
+                android:hint="@string/number_of_pax"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/Area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/which_area_do_you_prefer"
+                android:textColor="@color/black"
+                android:textSize="17dp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="15dp">
+
+                <RadioButton
+                    android:id="@+id/smokingArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/smoking_area" />
+
+                <RadioButton
+                    android:id="@+id/nonSmokingArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/non_smoking_area" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                android:text="@string/reservation_date"
+                android:textColor="@color/black"
+                android:textSize="17dp" />
+
+            <DatePicker
+                android:id="@+id/datePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/reservation_time"
+                android:textColor="@color/black"
+                android:textSize="17dp" />
+
+            <TimePicker
+                android:id="@+id/timePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:timePickerMode="spinner" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/confirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:shadowColor="@color/black"
+                    android:text="@string/confirm_reservation"
+                    android:textAlignment="center" />
+
+
+                <Button
+                    android:id="@+id/reset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/reset"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
+
